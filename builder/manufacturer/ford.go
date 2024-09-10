@@ -1,8 +1,10 @@
-package builder
+package manufacturer
+
+import "github.com/Beretta350/golang-design-patterns/builder/model"
 
 // FordBuilder is a concrete builder for Ford cars.
 type FordBuilder struct {
-	car Car
+	car model.Car
 }
 
 func (b *FordBuilder) SetModel(name string) {
@@ -21,7 +23,7 @@ func (b *FordBuilder) SetNumberOfSeats(numSeats int) {
 	b.car.Seats = numSeats
 }
 
-func (b *FordBuilder) GetCar() Car {
+func (b *FordBuilder) GetCar() model.Car {
 	b.car.Brand = "Ford"
 	return b.car
 }

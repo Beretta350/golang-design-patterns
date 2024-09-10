@@ -1,8 +1,10 @@
-package builder
+package manufacturer
+
+import "github.com/Beretta350/golang-design-patterns/builder/model"
 
 // ToyotaBuilder is a concrete builder for Toyota cars.
 type ToyotaBuilder struct {
-	car Car
+	car model.Car
 }
 
 func (b *ToyotaBuilder) SetModel(name string) {
@@ -21,7 +23,7 @@ func (b *ToyotaBuilder) SetNumberOfSeats(numSeats int) {
 	b.car.Seats = numSeats
 }
 
-func (b *ToyotaBuilder) GetCar() Car {
+func (b *ToyotaBuilder) GetCar() model.Car {
 	b.car.Brand = "Toyota"
 	return b.car
 }

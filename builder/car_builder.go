@@ -1,22 +1,8 @@
 package builder
 
 import (
-	"fmt"
+	"github.com/Beretta350/golang-design-patterns/builder/model"
 )
-
-// Car represents the product being built.
-type Car struct {
-	Brand        string
-	Model        string
-	Engine       string
-	Transmission string
-	Seats        int
-}
-
-func (c *Car) ShowDetails() string {
-	details := fmt.Sprintf("Brand: %s\nModel: %s\nEngine: %s\nTransmission: %s\nSeats: %d\n", c.Brand, c.Model, c.Engine, c.Transmission, c.Seats)
-	return details
-}
 
 // CarBuilder defines the steps for building a car.
 type CarBuilder interface {
@@ -24,5 +10,5 @@ type CarBuilder interface {
 	SetEngine(engineType string)
 	SetTransmission(transmissionType string)
 	SetNumberOfSeats(numSeats int)
-	GetCar() Car
+	GetCar() model.Car
 }
