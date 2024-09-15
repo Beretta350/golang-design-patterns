@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/Beretta350/golang-design-patterns/builder/manager"
+	"github.com/Beretta350/golang-design-patterns/builder"
 	"github.com/Beretta350/golang-design-patterns/builder/model"
 	"github.com/Beretta350/golang-design-patterns/builder/service"
 	"github.com/stretchr/testify/assert"
@@ -13,7 +13,7 @@ import (
 func TestCarBuilderCreation(t *testing.T) {
 	ctx := context.Background()
 
-	man := manager.CarManager{}
+	man := builder.CarManager{}
 	serv := service.NewCarService(man)
 
 	toyotaCar := serv.CreateCar(ctx, "Toyota")

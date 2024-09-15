@@ -12,6 +12,6 @@ type Car struct {
 }
 
 func (c *Car) ShowDetails() string {
-	details := fmt.Sprintf("Brand: %s\nModel: %s\nEngine: %s\nTransmission: %s\nSeats: %d\n", c.Brand, c.Model, c.Engine, c.Transmission, c.Seats)
+	details := fmt.Sprintf("Brand: %s Model: %s Engine: %s Transmission: %s Seats: %d\n", c.Brand, c.Model, c.Engine, c.Transmission, c.Seats)
 	return details
 }
