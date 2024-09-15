@@ -6,10 +6,6 @@ type GamerComputer struct {
 
 func NewGamerComputer() Computer {
 	return &GamerComputer{
-		Computer: &computer{
-			OS:             "Windows",
-			RAMSpace:       3200,
-			HardDriveSpace: 40000,
-		},
+		Computer: NewComputer("Windows", 3200, 40000),
 	}
 }

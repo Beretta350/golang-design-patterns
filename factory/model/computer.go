@@ -18,7 +18,7 @@ type computer struct {
 	HardDriveSpace int
 }
 
-func NewComputer(name, os string, ram, hd int) Computer {
+func NewComputer(os string, ram, hd int) Computer {
 	return &computer{OS: os, RAMSpace: ram, HardDriveSpace: hd}
 }
 

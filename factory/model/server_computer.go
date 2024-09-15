@@ -6,10 +6,6 @@ type ServerComputer struct {
 
 func NewServerComputer() Computer {
 	return &ServerComputer{
-		Computer: &computer{
-			OS:             "Linux",
-			RAMSpace:       128000,
-			HardDriveSpace: 4000000,
-		},
+		Computer: NewComputer("Linux", 128000, 4000000),
 	}
 }
