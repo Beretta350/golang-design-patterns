@@ -15,7 +15,7 @@ This repository includes Go implementations of various design patterns, categori
 
 2. **Structural Patterns**:  
    Patterns that help organize classes and objects in a manner that makes complex structures more manageable.
-   - [Adapter]()
+   - [Adapter](https://github.com/Beretta350/golang-design-patterns/tree/main/adapter)
    - ~~Composite~~
    - ~~Proxy~~
    - ~~Decorator~~
