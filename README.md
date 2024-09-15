@@ -31,8 +31,8 @@ This repository includes Go implementations of various design patterns, categori
 
 Each pattern has its own directory containing:
 - A clear, commented Go implementation.
-- A brief explanation of the pattern.
-- Examples of how to apply it in real-world scenarios.
+- ~~A brief explanation of the pattern.~~
+- ~~Examples of how to apply it in real-world scenarios.~~
 
 ### Clone the repository:
 
