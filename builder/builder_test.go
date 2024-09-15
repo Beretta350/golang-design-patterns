@@ -1,23 +1,37 @@
 package builder_test
 
 import (
-	"context"
+	"fmt"
 	"testing"
 
 	"github.com/Beretta350/golang-design-patterns/builder"
+	"github.com/Beretta350/golang-design-patterns/builder/manufacturer"
 	"github.com/Beretta350/golang-design-patterns/builder/model"
-	"github.com/Beretta350/golang-design-patterns/builder/service"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestCarBuilderCreation(t *testing.T) {
-	ctx := context.Background()
+	manager := builder.CarManager{}
+	var builder builder.CarBuilder
 
-	man := builder.CarManager{}
-	serv := service.NewCarService(man)
+	builder = &manufacturer.ToyotaBuilder{}
 
-	toyotaCar := serv.CreateCar(ctx, "Toyota")
-	fordCar := serv.CreateCar(ctx, "Ford")
+	toyotaCar := manager.SetBuilder(builder).
+		SetModel("Corolla").
+		SetEngine("1.8L").
+		SetTransmission("Automatic").
+		SetNumberOfSeats(5).BuildCar()
+
+	builder = &manufacturer.FordBuilder{}
+
+	fordCar := manager.SetBuilder(builder).
+		SetModel("Mustang").
+		SetEngine("5.0L V8").
+		SetTransmission("Manual").
+		SetNumberOfSeats(4).BuildCar()
+
+	fmt.Println(toyotaCar.ShowDetails())
+	fmt.Println(fordCar.ShowDetails())
 
 	toyotaExpectedCar := model.Car{
 		Brand:        "Toyota",
