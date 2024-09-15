@@ -6,6 +6,7 @@ import (
 	"github.com/Beretta350/golang-design-patterns/observer"
 )
 
+// Item is the subject being observed
 type Item struct {
 	observerList []observer.Observer
 	name         string

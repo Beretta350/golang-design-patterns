@@ -2,6 +2,7 @@ package model
 
 import "fmt"
 
+// The customer is the observer
 type Customer struct {
 	Name string
 }

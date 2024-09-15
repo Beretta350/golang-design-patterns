@@ -13,6 +13,7 @@ type CarBuilder interface {
 	BuildCar() model.Car
 }
 
+// CarManager is the object responsible to set the car being built
 type CarManager struct {
 	builder CarBuilder
 }

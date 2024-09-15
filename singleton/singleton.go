@@ -15,6 +15,8 @@ var once sync.Once
 var instance *single
 
 func SingleInstance() *single {
+
+	// Ensures this block runs only once, even in concurrent execution
 	once.Do(func() {
 		instanceId, _ := uuid.NewUUID()
 		instance = &single{Id: instanceId.String()}
